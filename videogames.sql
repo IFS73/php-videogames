@@ -24,6 +24,21 @@ INSERT INTO `developer` (`id`, `name`, `link`) VALUES
 (4,	'tri-Ace',	'https://en.wikipedia.org/wiki/Tri-Ace'),
 (5,	'Nintendo',	'https://en.wikipedia.org/wiki/Nintendo');
 
+DROP TABLE IF EXISTS `platform`;
+CREATE TABLE `platform` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+INSERT INTO `platform` (`id`, `name`, `link`) VALUES
+(1,	'SNES',	'https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System'),
+(2,	'MS-DOS',	'https://en.wikipedia.org/wiki/MS-DOS'),
+(3,	'Amiga',	'https://en.wikipedia.org/wiki/Amiga'),
+(4,	'PlayStation',	'https://en.wikipedia.org/wiki/PlayStation'),
+(5,	'Windows',	'https://en.wikipedia.org/wiki/Microsoft_Windows');
+
 DROP TABLE IF EXISTS `game`;
 CREATE TABLE `game` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -50,20 +65,5 @@ INSERT INTO `game` (`id`, `title`, `release_date`, `link`, `developer_id`, `plat
 (8,	'Star Ocean',	'1996-07-19',	'https://en.wikipedia.org/wiki/Star_Ocean_(video_game)',	4,	1),
 (9,	'The Legend of Zelda',	'1986-02-21',	'https://en.wikipedia.org/wiki/The_Legend_of_Zelda',	5,	1),
 (10,	'Super Mario Bros.',	'1985-09-13',	'https://en.wikipedia.org/wiki/Super_Mario_Bros.',	5,	1);
-
-DROP TABLE IF EXISTS `platform`;
-CREATE TABLE `platform` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `link` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
-
-INSERT INTO `platform` (`id`, `name`, `link`) VALUES
-(1,	'SNES',	'https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System'),
-(2,	'MS-DOS',	'https://en.wikipedia.org/wiki/MS-DOS'),
-(3,	'Amiga',	'https://en.wikipedia.org/wiki/Amiga'),
-(4,	'PlayStation',	'https://en.wikipedia.org/wiki/PlayStation'),
-(5,	'Windows',	'https://en.wikipedia.org/wiki/Microsoft_Windows');
 
 -- 2020-10-21 17:48:00
